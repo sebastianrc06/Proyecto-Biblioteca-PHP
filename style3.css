@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Syne", sans-serif;
+}
+
+body {
+    background-image: url('/img/wallpaper.jpg'), linear-gradient(to right, #000000, #333333);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    margin: 0;
+    height: 121vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+footer-logo img {
+    max-width: 150px;
+    height: auto;
+}
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    backdrop-filter: blur(40px);
+}
+
+
+header img {
+    width: 170px;
+    height: 120px;
+    position: relative;
+    left: -70px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 90px;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 90px;
+}
+
+li {
+    list-style: none;
+    font-weight: 900;
+}
+
+li a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+
+li a::before,
+li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #86823f;
+    transform: scaleX(0);
+    transition: transform 0.25s;
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+}
+
+li a::before {
+    top: -3px;
+    transform-origin: left;
+}
+
+li a::after {
+    bottom: -3px;
+    transform-origin: right;
+}
+
+li a:hover::before,
+li a:hover::after,
+.active::before,
+.active::after {
+    transform: scaleX(1);
+}
+/* Agrega imágenes de fondo a cada .img usando CSS */
+.img:nth-child(1) { background-image: url('img/El\ libro\ de\ bill.jpeg'); }
+.img:nth-child(2) { background-image: url('img/Harry\ potter.jpeg'); }
+.img:nth-child(3) { background-image: url('img/la\ odisesa.jpg'); }
+.img:nth-child(4) { background-image: url('img/Paco\ yunque.jpg'); }
+.img:nth-child(5) { background-image: url('img/Romper\ circulo.avif'); }
+.img:nth-child(6) { background-image: url('img/2.jpeg'); }
+/* Continúa para las demás imágenes */
+.social-container {
+    display: flex;
+    gap: 40px;
+}
+
+.social-container i {
+    font-size: 25px;
+}
+
+article {
+    flex: 1;
+    min-height: 10vh;
+}
+
+.stage,
+.ring,
+.img {
+    width: 100%;
+    height: 110%;
+    transform-style: preserve-3d;
+    user-select: none;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.stage {
+    position: absolute;
+    overflow: hidden;
+}
+div1,
+.active {
+    position: absolute;
+}
+
+.container {
+    perspective: 2000px;
+    width: 300px;
+    height: 400px;
+    left: 50%;
+    top: 28%;
+    transform:
+        translate(-50%, -50%);
+}
+
+footer {
+    background: #111;
+    width: 100%;
+    position: relative; /* Cambia a relative */
+    margin-top: auto; /* Esto ayudará a empujar el footer hacia abajo */
+}
+
+footer .content {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 30px 40px 40px 40px;
+}
+
+footer .content .top {
+    margin-bottom: 10px;
+}
+
+.content .top .logo-details {
+    color: #fff;
+    font-size: 30px;
+}
+
+footer .content .link-boxes {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+footer .content .link-boxes .box {
+    width: 60%;
+    flex-wrap: wrap;
+}
+
+.content .link-boxes .box .link_name {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.link-boxes .box .link_name::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 35px;
+    background: #fff;
+}
+
+.content .link-boxes .box li {
+    margin: 6px 0;
+    list-style: none;
+}
+
+.content .link-boxes .box li a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all 0.4s ease;
+}
+
+.content .link-boxes .box li a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.content .link-boxes .input-box {
+    margin-right: 55px;
+    flex-wrap: wrap;
+}
+
+.link-boxes .input-box input {
+    height: 40px;
+    width: calc(100% + 55px);
+    outline: none;
+    border: 2px solid #AFAFB6;
+    background: #111;
+    border-radius: 4px;
+    padding: 0px;
+    font-size: 15px;
+    color: #fff;
+    margin-top: 5px;
+}
+
+.link-boxes .input-box input::placeholder {
+    color: #AFAFB6;
+    font-size: 16px;
+}
+
+.link-boxes .input-box input[type="button"] {
+    background: #fff;
+    color: #140B5C;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 4px 0;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.input-box input[type="button"]:hover {
+    opacity: 1;
+}
+
+footer .bottom-details {
+    width: 100%;
+    background: #111;
+}
+
+footer .bottom-details .bottom_text {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a {
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.bottom-details .bottom_text a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.bottom-details .bottom_text a {
+    margin-right: 10px;
+}
+
+@media (max-width: 700px) {
+    footer .content .link-boxes {
+        flex-wrap: wrap;
+    }
+
+    .box {
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    footer .content .link-boxes .input-box {
+        width: 40%;
+        margin-top: 10px;
+    }
+}
+
+.meta-link {
+    align-items: center;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: inline-flex;
+    gap: 5px;
+    left: 10px;
+    padding: 10px 20px;
+    position: fixed;
+    text-decoration: none;
+    transition: background-color 600ms, border-color 600ms;
+    z-index: 10000;
+}
+
+.meta-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.meta-link>i,
+.meta-link>span {
+    height: 20px;
+    line-height: 20px;
+}
+
+.meta-link>span {
+    color: white;
+    font-family: "Rubik", sans-serif;
+    transition: color 600ms;
+}
+.fa-instagram{
+    color: white;
+}
+button {
+    background-color: #E0E0E0; /* Fondo gris claro */
+    color: #1A1A40; /* Texto en un tono oscuro */
+    font-weight: bold;
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s ease; /* Transiciones suaves */
+}
+
+button:hover {
+    background-color: #D1C4E9; /* Cambio a un color lila claro al pasar el mouse */
+    color: #140B5C; /* Texto lila oscuro */
+    transform: scale(1.05); /* Efecto de zoom ligero */
+}

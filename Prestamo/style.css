@@ -1,0 +1,106 @@
+body {
+    background-image: url('/img/wallpaper.jpg'), linear-gradient(to right, #000000, #333333);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+form {
+    width: 600px;
+    padding: 4rem;
+    background: linear-gradient(to right, #000000, #333333);
+    border-radius: 20px;
+    color: aliceblue;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1.prestamo-titulo {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    display: block;
+    padding: 10px;
+    margin: 10px auto;
+    border: 4px solid rgb(240, 237, 237);
+    border-radius: 10px;
+    width: 95%;
+    background: transparent;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin: 8px 0;
+    color: aliceblue;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2); /* Aumenta el tamaño de los checkboxes */
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Añade espacio entre cada checkbox */
+    margin: 1.5rem 0;
+}
+
+input[type="email"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid #444;
+    font-size: 1rem;
+}
+
+.button-container {
+    text-align: center; 
+}
+
+button {
+    background-color: rebeccapurple;
+    padding: 0.8rem;
+    color: white;
+    border: none;
+    width: 60%;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid rebeccapurple;
+}
+
+/* Logo ajustado */
+.header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.logo {
+    height: 120px; /* Aumentado ligeramente el tamaño */
+    width: auto;
+}
