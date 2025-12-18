@@ -56,9 +56,6 @@ if(isset($_POST['btnregistrar'])){
 
 
 
-
-
-
     //if(!empty($_POST["btnregistrar"])){
     //    if(!empty($_POST["Usuario"]) and !empty($_POST["user-name"]) and !empty($_POST["Clave"])){
      //       $usuario = $_POST["Usuario"];

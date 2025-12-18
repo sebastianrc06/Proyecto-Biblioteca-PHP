@@ -11,6 +11,7 @@ require '../Email/Exception.php';
 require '../Email/PHPMailer.php';
 require '../Email/SMTP.php';
 
+
 // Definir la variable para el mensaje
 $mensaje = '';
 
